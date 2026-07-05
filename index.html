@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 Memory Card Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🧠 Memory Card Game</h1>
+
+    <div class="top-bar">
+
+        <div class="box">
+            <h3>⏱ Time</h3>
+            <p><span id="timer">0</span> s</p>
+        </div>
+
+        <div class="box">
+            <h3>🎯 Moves</h3>
+            <p><span id="moves">0</span></p>
+        </div>
+
+        <div class="box">
+            <h3>⭐ Stars</h3>
+            <p id="stars">⭐⭐⭐</p>
+        </div>
+
+    </div>
+
+    <div class="controls">
+
+        <select id="difficulty">
+            <option value="easy">Easy (8 Cards)</option>
+            <option value="medium" selected>Medium (16 Cards)</option>
+            <option value="hard">Hard (24 Cards)</option>
+        </select>
+
+        <button id="startBtn">Start Game</button>
+
+        <button onclick="restartGame()">Restart</button>
+
+        <a href="info.html">📘 Info</a>
+
+        <a href="about.html">ℹ About</a>
+
+    </div>
+
+    <div id="gameBoard" class="game-board"></div>
+
+    <div class="score-board">
+
+        <h2>🏆 Best Score</h2>
+
+        <p id="bestScore">--</p>
+
+        <h2>🥇 Leaderboard</h2>
+
+        <ol id="leaderboard">
+
+        </ol>
+
+    </div>
+
+</div>
+
+<div id="winPopup" class="popup">
+
+    <div class="popup-content">
+
+        <h2>🎉 Congratulations!</h2>
+
+        <p>You completed the game.</p>
+
+        <p><b>Time:</b> <span id="finalTime"></span> sec</p>
+
+        <p><b>Moves:</b> <span id="finalMoves"></span></p>
+
+        <p><b>Stars:</b> <span id="finalStars"></span></p>
+
+        <button onclick="restartGame()">Play Again</button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
